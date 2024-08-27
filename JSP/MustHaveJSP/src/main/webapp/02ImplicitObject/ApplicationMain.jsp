@@ -25,6 +25,6 @@
 	<ul>
 		<li>this 사용 : <%= useImplicitObject() %></li>
 		<li>내장 객체를 인수로 전달 : <%= useImplicitObject(application) %></li>
-	</ul>\
+	</ul>
 </body>
 </html>
