@@ -9,8 +9,22 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+  
   <context-param>
   	<param-name>INIT_PARAM</param-name>
   	<param-value>web.xml에 저장한 초기화 매개변수</param-value>
   </context-param>
+  
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/02ImplicitObject/Exception.jsp</location>
+  </error-page>
+  <error-page>
+  	<error-code>405</error-code>
+  	<location>/02ImplicitObject/Exception.jsp</location>
+  </error-page>
+  <error-page>
+  	<error-code>500</error-code>
+  	<location>/02ImplicitObject/Exception.jsp</location>
+  </error-page>
 </web-app>
