@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>session 영역</title>
 </head>
 <body>
     <h2>페이지 이동 후 session 영역의 속성 읽기</h2>
