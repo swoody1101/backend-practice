@@ -23,6 +23,7 @@ public class JSFunction {
 			String script = ""
 					+ "<script>"
 					+ "    alert('" + msg + "');"
+					+ "    history.back();"
 					+ "</script>";
 			out.println(script);
 		} catch (Exception e) {}
