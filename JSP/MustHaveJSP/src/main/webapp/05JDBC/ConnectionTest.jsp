@@ -13,5 +13,16 @@
 	JDBConnect jdbc1 = new JDBConnect();
 	jdbc1.close();
 	%>
+	
+	<h2>JDBC 테스트 2</h2>
+	<%
+	String driver = application.getInitParameter("OracleDriver");
+	String url = application.getInitParameter("OracleURL");
+	String id = application.getInitParameter("OracleId");
+	String pwd = application.getInitParameter("OraclePwd");
+	
+	JDBConnect jdbc2 = new JDBConnect(driver, url, id, pwd);
+	jdbc2.close();
+	%>
 </body>
 </html>
