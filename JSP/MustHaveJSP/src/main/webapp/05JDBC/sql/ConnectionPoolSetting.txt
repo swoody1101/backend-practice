@@ -1,0 +1,17 @@
+<!-- server.xml -->
+    <Resource auth="Container"
+              driverClassName="oracle.jdbc.OracleDriver"
+              type="javax.sql.DataSource" 
+              initialSize="0"
+              minIdle="5"
+              maxTotal="20"
+              maxIdle="20"
+              maxWaitMillis="5000"
+              url="jdbc:oracle:thin:@localhost:1521:xe"
+              name="dbcp_myoracle"
+              username="swoody"
+              password="0000" />
+
+<!-- context.xml -->
+    <ResourceLink global="dbcp_myoracle" name="dbcp_myoracle" 
+                  type="javax.sql.DataSource"/>
