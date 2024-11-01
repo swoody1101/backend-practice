@@ -18,7 +18,7 @@ public class JDBConnect {
 			Class.forName("oracle.jdbc.OracleDriver");
 
 			// DB에 연결
-			String url = "jdbc:oracle:thi:@localhost:1521:xe";
+			String url = "jdbc:oracle:thin:@localhost:1521:xe";
 			String id = "swoody";
 			String pwd = "0000";
 			con = DriverManager.getConnection(url, id, pwd);
