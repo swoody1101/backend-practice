@@ -3,6 +3,6 @@
 </header>
 
 <body>
-  <h3>JSP : <a href="https://github.com/swoody1101/frontend-pracitce/tree/main/HTML%2BCSS%2BJavaScript">성낙현의 JSP 자바 웹 프로그래밍</a></h3>
+  <h3>JSP : <a href="https://github.com/swoody1101/backend-practice/tree/main/JSP">성낙현의 JSP 자바 웹 프로그래밍</a></h3>
 </body>
 
