@@ -14,22 +14,7 @@
   	<param-name>INIT_PARAM</param-name>
   	<param-value>web.xml에 저장한 초기화 매개변수</param-value>
   </context-param>
-  
-  <!-- 
-  <error-page>
-  	<error-code>404</error-code>
-  	<location>/02ImplicitObject/Exception.jsp</location>
-  </error-page>
-  <error-page>
-  	<error-code>405</error-code>
-  	<location>/02ImplicitObject/Exception.jsp</location>
-  </error-page>
-  <error-page>
-  	<error-code>500</error-code>
-  	<location>/02ImplicitObject/Exception.jsp</location>
-  </error-page>
-   -->
-  
+    
   <context-param>
    	<param-name>OracleDriver</param-name>
    	<param-value>oracle.jdbc.OracleDriver</param-value>
@@ -46,4 +31,23 @@
   	<param-name>OraclePwd</param-name>
   	<param-value>0000</param-value> 		
   </context-param>
+  
+  <session-config>
+  	<session-timeout>20</session-timeout>
+  </session-config>
+  
+  <!-- 
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/02ImplicitObject/Exception.jsp</location>
+  </error-page>
+  <error-page>
+  	<error-code>405</error-code>
+  	<location>/02ImplicitObject/Exception.jsp</location>
+  </error-page>
+  <error-page>
+  	<error-code>500</error-code>
+  	<location>/02ImplicitObject/Exception.jsp</location>
+  </error-page>
+   -->
 </web-app>
