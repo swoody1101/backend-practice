@@ -6,3 +6,4 @@
 <h3>04. <a href="https://github.com/swoody1101/backend-practice/tree/main/JSP/MustHaveJSP/src/main/webapp/04Cookie">쿠키(Cookie)</a></h3>
 <h3>05. <a href="https://github.com/swoody1101/backend-practice/tree/main/JSP/MustHaveJSP/src/main/webapp/05JDBC">데이터베이스</a></h3>
 <h3>06. <a href="https://github.com/swoody1101/backend-practice/tree/main/JSP/MustHaveJSP/src/main/webapp/06Session">세션(Session)</a></h3>
+<h3>07. <a href="https://github.com/swoody1101/backend-practice/tree/main/JSP/MustHaveJSP/src/main/webapp/07ActionTag">액션 태그(Action Tag)</a></h3>
