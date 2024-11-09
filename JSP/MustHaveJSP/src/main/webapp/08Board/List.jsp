@@ -81,6 +81,7 @@ dao.close();
 		}
 		%>
 	</table>
+	
 	<table border="1" width="90%">
 		<tr align="right">
 			<td>
