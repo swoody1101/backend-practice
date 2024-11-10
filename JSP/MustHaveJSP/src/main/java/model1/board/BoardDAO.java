@@ -85,15 +85,13 @@ public class BoardDAO extends JDBConnect {
 	public BoardDTO selectView(String num) {
 		BoardDTO dto = new BoardDTO();
 
-		String query = "SELECT B.*, M.name "
-				+ "FROM memeber M INNER JOIN board B " 
-				+ "ON M.id=B.id " + "WHERE num=?";
+		String query = "SELECT B.*, M.name " + "FROM memeber M INNER JOIN board B " + "ON M.id=B.id " + "WHERE num=?";
 
 		try {
 			pstmt = con.prepareStatement(query);
 			pstmt.setString(1, num);
 			rs = pstmt.executeQuery();
-			
+
 			if (rs.next()) {
 				dto.setNum(rs.getString("num"));
 				dto.setTitle(rs.getString("title"));
@@ -104,10 +102,24 @@ public class BoardDAO extends JDBConnect {
 				dto.setName(rs.getString("name"));
 			}
 		} catch (Exception e) {
-			System.out.println();
+			System.out.println("게시물 상세보기 중 예외 발생");
 			e.printStackTrace();
 		}
 
 		return dto;
+	}
+
+	public void updateVisitCount(String num) {
+		String query = "UPDATE board SET "
+				+ "visitcount=visitcount+1 "
+				+ "WHERE num=?";
+		
+		try {
+			pstmt = con.prepareStatement(query);
+			pstmt.setString(1, num);
+			pstmt.executeQuery();
+		} catch (Exception e) {
+			System.out.println("게시물 조회수 증가 중 예외 발생");
+		}
 	}
 }
