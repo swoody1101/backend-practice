@@ -64,11 +64,9 @@ public class BoardDAO extends JDBConnect {
 
 	public int insertWrite(BoardDTO dto) {
 		int result = 0;
-		
+
 		try {
-			String query = "INSERT INTO board ("
-					+ "num, title, content, id, visitcount) " 
-					+ "VALUES ("
+			String query = "INSERT INTO board (" + "num, title, content, id, visitcount) " + "VALUES ("
 					+ "seq_board_num.NEXTVAL, ?, ?, ?, 0)";
 			pstmt = con.prepareStatement(query);
 			pstmt.setString(1, dto.getTitle());
@@ -82,5 +80,34 @@ public class BoardDAO extends JDBConnect {
 		}
 
 		return result;
+	}
+
+	public BoardDTO selectView(String num) {
+		BoardDTO dto = new BoardDTO();
+
+		String query = "SELECT B.*, M.name "
+				+ "FROM memeber M INNER JOIN board B " 
+				+ "ON M.id=B.id " + "WHERE num=?";
+
+		try {
+			pstmt = con.prepareStatement(query);
+			pstmt.setString(1, num);
+			rs = pstmt.executeQuery();
+			
+			if (rs.next()) {
+				dto.setNum(rs.getString("num"));
+				dto.setTitle(rs.getString("title"));
+				dto.setContent(rs.getString("content"));
+				dto.setPostdate(rs.getDate("postdate"));
+				dto.setId(rs.getString("id"));
+				dto.setVisitcount(rs.getString("visitcount"));
+				dto.setName(rs.getString("name"));
+			}
+		} catch (Exception e) {
+			System.out.println();
+			e.printStackTrace();
+		}
+
+		return dto;
 	}
 }
