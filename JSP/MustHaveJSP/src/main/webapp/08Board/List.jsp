@@ -9,10 +9,10 @@
 BoardDAO dao = new BoardDAO(application);
 
 Map<String, Object> param = new HashMap<String, Object>();
-String searchFiled = request.getParameter("searchFiled");
+String searchField = request.getParameter("searchField");
 String searchWord = request.getParameter("searchWord");
 if (searchWord != null) {
-	param.put("searchFiled", searchFiled);
+	param.put("searchField", searchField);
 	param.put("searchWord", searchWord);
 }
 
@@ -36,7 +36,7 @@ dao.close();
 				<td align="center">
 					<select name="searchField">
 						<option value="title">제목</option>
-						<option value="content">제목</option>
+						<option value="content">내용</option>
 					</select>
 					<input type="text" name="searchWord" />
 					<input type="submit" value="검색하기" />
