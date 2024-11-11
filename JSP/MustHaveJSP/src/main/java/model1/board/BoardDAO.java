@@ -85,7 +85,10 @@ public class BoardDAO extends JDBConnect {
 	public BoardDTO selectView(String num) {
 		BoardDTO dto = new BoardDTO();
 
-		String query = "SELECT B.*, M.name " + "FROM memeber M INNER JOIN board B " + "ON M.id=B.id " + "WHERE num=?";
+		String query = "SELECT B.*, M.name " 
+				+ "FROM member M INNER JOIN board B "
+				+ "ON M.id=B.id " 
+				+ "WHERE B.num=?";
 
 		try {
 			pstmt = con.prepareStatement(query);
