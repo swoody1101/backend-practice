@@ -9,8 +9,6 @@ BoardDAO dao = new BoardDAO(application);
 dao.updateVisitCount(num);
 BoardDTO dto = dao.selectView(num);
 
-System.out.println(dto.getContent());
-
 dao.close();
 %>
 <!DOCTYPE html>
