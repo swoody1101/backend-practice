@@ -37,7 +37,7 @@ dao.close();
 <jsp:include page="../Common/Link.jsp" />
 <body>
 	<h2>회원제 게시판 - 수정하기(Edit)</h2>
-	<form name="writeFrm" method="post" action="EditProcess.jsp 
+	<form name="writeFrm" method="post" action="EditProcess.jsp" 
 		onsubmit="return validateForm(this);">
 		<input type="hidden" name="num" value="<%=dto.getNum()%>" />
 		<table border="1" width="90%">
