@@ -7,3 +7,4 @@
 <h3>05. <a href="https://github.com/swoody1101/backend-practice/tree/main/JSP/MustHaveJSP/src/main/webapp/05JDBC">데이터베이스</a></h3>
 <h3>06. <a href="https://github.com/swoody1101/backend-practice/tree/main/JSP/MustHaveJSP/src/main/webapp/06Session">세션(Session)</a></h3>
 <h3>07. <a href="https://github.com/swoody1101/backend-practice/tree/main/JSP/MustHaveJSP/src/main/webapp/07ActionTag">액션 태그(Action Tag)</a></h3>
+<h3>08. <a href="https://github.com/swoody1101/backend-practice/tree/main/JSP/MustHaveJSP/src/main/webapp/08Board">모델1 방식의 회원제 게시판 프로젝트</a></h3>
