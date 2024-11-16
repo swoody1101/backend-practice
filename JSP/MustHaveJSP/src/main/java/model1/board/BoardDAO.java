@@ -90,7 +90,7 @@ public class BoardDAO extends JDBConnect {
 				dto.setNum(rs.getString("num"));
 				dto.setTitle(rs.getString("title"));
 				dto.setContent(rs.getString("content"));
-				dto.setPostdate(rs.getDate("postdsate"));
+				dto.setPostdate(rs.getDate("postdate"));
 				dto.setId(rs.getString("id"));
 				dto.setVisitcount(rs.getString("visitcount"));
 				
