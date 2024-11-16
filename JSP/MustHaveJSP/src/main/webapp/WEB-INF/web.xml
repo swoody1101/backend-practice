@@ -33,7 +33,7 @@
   </context-param>
   
   <context-param>
-  	<param-name>POST_PER_PAGE</param-name>
+  	<param-name>POSTS_PER_PAGE</param-name>
   	<param-value>10</param-value>
   </context-param>
   <context-param>
