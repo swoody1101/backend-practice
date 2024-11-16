@@ -1,7 +1,7 @@
 package utils;
 
 public class BoardPage {
-	public static String paginStr(int totalCount, int pageSize, int blockPage, int pageNum, String reqUrl) {
+	public static String pagingStr(int totalCount, int pageSize, int blockPage, int pageNum, String reqUrl) {
 		String pagingStr = "";
 		int totalPages = (int) (Math.ceil((double) totalCount / pageSize));
 
