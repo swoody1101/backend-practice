@@ -66,7 +66,7 @@ public class BoardDAO extends JDBConnect {
 		List<BoardDTO> bbs = new Vector<BoardDTO>();
 		
 		String query = "SELECT * FROM ("
-					+ "		SELECT TB.*, ROWNUM, rNum FROM ("
+					+ "		SELECT Tb.*, ROWNUM rNum FROM ("
 					+ "			SELECT * FROM board";
 					
 		if (map.get("searchWord") != null) {
