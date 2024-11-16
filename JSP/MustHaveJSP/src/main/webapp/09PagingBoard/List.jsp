@@ -1,3 +1,4 @@
+<%@page import="utils.BoardPage"%>
 <%@page import="model1.board.BoardDTO"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.Map"%>
@@ -44,7 +45,7 @@ dao.close();
 <body>
 	<jsp:include page="../Common/Link.jsp" />
 
-	<h2>목록 보기(List)</h2>
+	<h2>목록 보기(List) - 현재 페이지 : <%=pageNum%> (전체 : <%= totalPage %>)</h2>
 	<form method="get">
 		<table border="1" width="90%">
 			<tr>
@@ -74,12 +75,14 @@ dao.close();
 		<%
 		} else {
 			int virtualNum = 0;
+			int countNum = 0;
 			for (BoardDTO dto : boardLists) {
-				virtualNum = totalCount--;
+				virtualNum = totalCount - (((pageNum - 1) * pageSize) + countNum++);
 			%>
 			<tr align="center">
 				<td><%=virtualNum%></td>
-				<td align="left"><a href="View.jsp?num=<%=dto.getNum()%>"><%=dto.getTitle()%></a>
+				<td align="left">
+					<a href="View.jsp?num=<%=dto.getNum()%>"><%=dto.getTitle()%></a>
 				</td>
 				<td align="center"><%=dto.getId()%></td>
 				<td align="center"><%=dto.getVisitcount()%></td>
@@ -92,7 +95,10 @@ dao.close();
 	</table>
 
 	<table border="1" width="90%">
-		<tr align="right">
+		<tr align="center">
+			<td>
+				<%=BoardPage.pagingStr(totalCount, pageSize, blockPage, pageNum, reqUrl)(totalCount, pageSize, blockPage, pageNum, reqUrl)(totalCount, pageSize, blockPage, pageNum, request.getRequestURI())%>
+			</td>
 			<td>
 				<button type="button" onclick="location.href='Write.jsp';">글쓰기</button>
 			</td>
