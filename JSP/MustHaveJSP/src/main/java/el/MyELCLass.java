@@ -27,4 +27,23 @@ public class MyELCLass {
 		}
 		return true;
 	}
+
+	public static String showGugudan(int limitDan) {
+		StringBuffer sb = new StringBuffer();
+		try {
+			sb.append("<table border='1'>");
+			for (int i = 2; i <= limitDan; i++) {
+				sb.append("<tr>");
+				for (int j = 1; j <= 9; j++) {
+					sb.append("<td>" + i + " * " + j + "=" + (i * j) + "</td>");
+				}
+				sb.append("</tr>");
+			}
+			sb.append("</table>");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return sb.toString();
+	}
 }
