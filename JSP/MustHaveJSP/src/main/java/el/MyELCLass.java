@@ -29,13 +29,14 @@ public class MyELCLass {
 	}
 
 	public static String showGugudan(int limitDan) {
+		System.out.println("함수 호출");
 		StringBuffer sb = new StringBuffer();
 		try {
 			sb.append("<table border='1'>");
 			for (int i = 2; i <= limitDan; i++) {
 				sb.append("<tr>");
 				for (int j = 1; j <= 9; j++) {
-					sb.append("<td>" + i + " * " + j + "=" + (i * j) + "</td>");
+					sb.append("<td>" + i + "*" + j + "=" + (i * j) + "</td>");
 				}
 				sb.append("</tr>");
 			}
