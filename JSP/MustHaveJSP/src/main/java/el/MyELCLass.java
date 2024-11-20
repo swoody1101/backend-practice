@@ -17,4 +17,14 @@ public class MyELCLass {
 
 		return returnStr;
 	}
+
+	public static boolean isNumber(String value) {
+		char[] chArr = value.toCharArray();
+		for (int i = 0; i < chArr.length; i++) {
+			if (!(chArr[i] >= '0' && chArr[i] <= '9')) {
+				return false;
+			}
+		}
+		return true;
+	}
 }
