@@ -10,3 +10,4 @@
 <h3>08. <a href="https://github.com/swoody1101/backend-practice/tree/main/JSP/MustHaveJSP/src/main/webapp/08Board">모델1 방식의 회원제 게시판 프로젝트</a></h3>
 <h3>09. <a href="https://github.com/swoody1101/backend-practice/tree/main/JSP/MustHaveJSP/src/main/webapp/09PagingBoard">게시판에 페이징 기능 넣기</a></h3>
 <h3>10. <a href="https://github.com/swoody1101/backend-practice/tree/main/JSP/MustHaveJSP/src/main/webapp/10EL">표현 언어(EL: Excpression Language)</a></h3>
+<h3>11. <a href="https://github.com/swoody1101/backend-practice/tree/main/JSP/MustHaveJSP/src/main/webapp/11JSTL">JSP 표준 태그 라이브러리(JSTL)</a></h3>
