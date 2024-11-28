@@ -4,5 +4,6 @@
 
 <body>
   <h3>JSP : <a href="https://github.com/swoody1101/backend-practice/tree/main/JSP">성낙현의 JSP 자바 웹 프로그래밍</a></h3>
+  <h3>Modern_Java_in_Action : <a href="https://github.com/swoody1101/backend-practice/tree/main/JSP">Modern Java in Action</a></h3>
 </body>
 
