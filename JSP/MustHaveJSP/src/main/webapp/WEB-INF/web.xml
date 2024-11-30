@@ -72,4 +72,14 @@
   	<location>/02ImplicitObject/Exception.jsp</location>
   </error-page>
    -->
+   
+   <servlet>
+   	<servlet-name>HelloServlet</servlet-name>
+   	<servlet-class>servlet.HelloServlet</servlet-class>
+   </servlet>
+   <servlet-mapping>
+   	<servlet-name>HelloServlet</servlet-name>
+   	<url-pattern>/12Servlet/HelloServlet.do</url-pattern>
+   </servlet-mapping>
+   
 </web-app>
