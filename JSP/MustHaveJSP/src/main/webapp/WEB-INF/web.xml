@@ -82,4 +82,12 @@
    	<url-pattern>/12Servlet/HelloServlet.do</url-pattern>
    </servlet-mapping>
    
+   <servlet>
+   	<servlet-name>DirectServletPrint</servlet-name>
+   	<servlet-class>servlet.DirectServletPrint</servlet-class>
+   </servlet>
+   <servlet-mapping>
+   	<servlet-name>DirectServletPrint</servlet-name>
+   	<url-pattern>/12Servlet/DirectServletPrint.do</url-pattern>
+   </servlet-mapping>
 </web-app>
