@@ -21,7 +21,7 @@ public class MemberAuth extends HttpServlet {
 		String driver = application.getInitParameter("OracleDriver");
 		String connectUrl = application.getInitParameter("OracleURL");
 		String oId = application.getInitParameter("OracleId");
-		String oPass = application.getInitParameter("OraclePws");
+		String oPass = application.getInitParameter("OraclePwd");
 
 		dao = new MemberDAO(driver, connectUrl, oId, oPass);
 	}
@@ -36,15 +36,15 @@ public class MemberAuth extends HttpServlet {
 		MemberDTO memberDTO = dao.getMemberDTO(id, pass);
 		String memberName = memberDTO.getName();
 		if (memberName != null) {
-			req.setAttribute("authMessage", memberName + "회원님 반갑습니다.");
-		} else {
-			if(adminId.equals(id)) {
-				
+			if (adminId.equals(memberName)) {
+				req.setAttribute("authMessage", adminId + "는 최고 관리자입니다.");
+			} else {
+				req.setAttribute("authMessage", memberName + "회원님 반갑습니다.");
 			}
+		} else {
 			req.setAttribute("authMessage", "귀하는 회원이 아닙니다.");
 		}
-		req.getRequestDispatcher("/12Servlet/MemeberAuth.jsp")
-			.forward(req, resp);
+		req.getRequestDispatcher("/12Servlet/MemberAuth.jsp").forward(req, resp);
 	}
 
 	@Override
