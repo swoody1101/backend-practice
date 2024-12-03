@@ -11,11 +11,11 @@
 	<p>
 		<strong>${ authMessage }</strong>
 		<br />
-		<a href="./MemberAuth.mvc?id=swoody&pass=1111">회원인증(관리자)</a>
+		<a href="./MemberAuth.mvc?id=swoody&pass=1234">회원인증(관리자)</a>
 		&nbsp;&nbsp;
-		<a href="./MemberAuth.mvc?id=swoody&pass=1111">회원인증(회원)</a>
+		<a href="./MemberAuth.mvc?id=test1&pass=1111">회원인증(회원)</a>
 		&nbsp;&nbsp;
-		<a href="./MemberAuth.mvc?id=stranger&pass=1111">회원인증(비회원)</a>
+		<a href="./MemberAuth.mvc?id=stranger&pass=1234">회원인증(비회원)</a>
 	</p>
 </body>
 </html>
