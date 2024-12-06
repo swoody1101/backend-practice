@@ -55,5 +55,4 @@ public class MyFileDTO {
 	public void setPostdate(String postdate) {
 		this.postdate = postdate;
 	}
-
 }
