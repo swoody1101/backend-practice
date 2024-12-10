@@ -14,6 +14,21 @@ import jakarta.servlet.http.HttpServletResponse;
 public class UploadProcess extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		try {
+			String saveDirectory = getServletContext().getRealPath("/Uploads");
+			String originalFileName = FileUtil.uploadFile(req, saveDirectory);
+			String savedFileName = FileUtil.renameFile(saveDirectory, originalFileName);
+			insertMyFile(req, originalFileName, savedFileName);
+			resp.sendRedirect("FileList.jsp");
+		} catch (Exception e) {
+			e.printStackTrace();
+			req.setAttribute("errorMessage", "파일 업로드 오류");
+			req.getRequestDispatcher("FileUploadMain.jsp").forward(req, resp);
+		}
+	}
+
 	private void insertMyFile(HttpServletRequest req, String oFileName, String sFileName) {
 		String title = req.getParameter("title");
 		String[] cateArray = req.getParameterValues("cate");
