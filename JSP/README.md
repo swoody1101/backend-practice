@@ -16,3 +16,5 @@
 <h3>14. <a href="https://github.com/swoody1101/backend-practice/tree/main/JSP/MustHaveJSP/src/main/webapp/"></a></h3>
 <h3>15. <a href="https://github.com/swoody1101/backend-practice/tree/main/JSP/MustHaveJSP/src/main/webapp/"></a></h3>
 <h3>16. <a href="https://github.com/swoody1101/backend-practice/tree/main/JSP/MustHaveJSP/src/main/webapp/"></a></h3>
+<h3>17. <a href="https://github.com/swoody1101/backend-practice/tree/main/JSP/MustHaveJSP/src/main/webapp/"></a></h3>
+<h3>18. <a href="https://github.com/swoody1101/backend-practice/tree/main/JSP/MustHaveJSP/src/main/webapp/"></a></h3>
